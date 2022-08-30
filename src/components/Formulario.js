@@ -1,5 +1,5 @@
 import React, { Fragment, useState } from "react";
-import uuid from "uuid/v4";
+import { v4 as uuid } from "uuid";
 import PropTypes from "prop-types";
 
 const Formulario = ({ crearCita }) => {
@@ -60,7 +60,7 @@ const Formulario = ({ crearCita }) => {
 
   return (
     <Fragment>
-      <h2>Crear Cita</h2>
+      <h2 data-testid="maintitle">Crear Cita</h2>
 
       {error ? (
         <p className="alerta-error">Todos los campos son obligatorios</p>
@@ -113,7 +113,11 @@ const Formulario = ({ crearCita }) => {
           value={sintomas}
         ></textarea>
 
-        <button type="submit" className="u-full-width button-primary">
+        <button
+          data-testid="btn-submit"
+          type="submit"
+          className="u-full-width button-primary"
+        >
           Agregar Cita
         </button>
       </form>
