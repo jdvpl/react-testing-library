@@ -56,6 +56,7 @@ it("<App/> verificar las citas en el DOM", () => {
   expect(btnEliminar.tagName).toBe("BUTTON");
   expect(screen.getByTestId("btn-eliminar")).toBeInTheDocument();
   // verificar cita
+  /* Checking if the text "Saitama" is in the document. */
   expect(screen.getByText("Saitama")).toBeInTheDocument();
 });
 
